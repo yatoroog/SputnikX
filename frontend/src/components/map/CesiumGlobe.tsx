@@ -121,8 +121,6 @@ export default function CesiumGlobe({
         Cesium.Ion.defaultAccessToken = token;
       }
 
-      const baseUrl = Cesium.buildModuleUrl('');
-
       let viewer: InstanceType<typeof Cesium.Viewer>;
       try {
         viewer = new Cesium.Viewer(containerRef.current, {
@@ -139,12 +137,12 @@ export default function CesiumGlobe({
           selectionIndicator: false,
           skyBox: new Cesium.SkyBox({
             sources: {
-              positiveX: `${baseUrl}Assets/Textures/SkyBox/tycho2t3_80_px.jpg`,
-              negativeX: `${baseUrl}Assets/Textures/SkyBox/tycho2t3_80_mx.jpg`,
-              positiveY: `${baseUrl}Assets/Textures/SkyBox/tycho2t3_80_py.jpg`,
-              negativeY: `${baseUrl}Assets/Textures/SkyBox/tycho2t3_80_my.jpg`,
-              positiveZ: `${baseUrl}Assets/Textures/SkyBox/tycho2t3_80_pz.jpg`,
-              negativeZ: `${baseUrl}Assets/Textures/SkyBox/tycho2t3_80_mz.jpg`,
+              positiveX: Cesium.buildModuleUrl('Assets/Textures/SkyBox/tycho2t3_80_px.jpg'),
+              negativeX: Cesium.buildModuleUrl('Assets/Textures/SkyBox/tycho2t3_80_mx.jpg'),
+              positiveY: Cesium.buildModuleUrl('Assets/Textures/SkyBox/tycho2t3_80_py.jpg'),
+              negativeY: Cesium.buildModuleUrl('Assets/Textures/SkyBox/tycho2t3_80_my.jpg'),
+              positiveZ: Cesium.buildModuleUrl('Assets/Textures/SkyBox/tycho2t3_80_pz.jpg'),
+              negativeZ: Cesium.buildModuleUrl('Assets/Textures/SkyBox/tycho2t3_80_mz.jpg'),
             },
           }),
           showRenderLoopErrors: false,
