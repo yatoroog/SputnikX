@@ -21,10 +21,7 @@ func SetupRoutes(app *fiber.App, service *satellite.SatelliteService, hub *ws.Hu
 
 	// Pass predictions
 	api.Get("/passes", handlers.GetPasses)
-<<<<<<< HEAD
 	api.Get("/passes/area", handlers.GetAreaPasses)
-=======
->>>>>>> 50af800 (feat: phase 0)
 
 	// TLE management
 	api.Post("/tle/upload", handlers.UploadTLE)

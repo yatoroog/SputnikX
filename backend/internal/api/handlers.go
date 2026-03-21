@@ -177,7 +177,6 @@ func (h *Handlers) GetPasses(c *fiber.Ctx) error {
 	})
 }
 
-<<<<<<< HEAD
 // GetAreaPasses predicts satellite passes over a map location for ALL satellites.
 // GET /api/passes/area
 // Required query params: lat, lng
@@ -289,8 +288,6 @@ func (h *Handlers) GetAreaPasses(c *fiber.Ctx) error {
 	})
 }
 
-=======
->>>>>>> 50af800 (feat: phase 0)
 // UploadTLE handles TLE data upload (raw text body).
 // POST /api/tle/upload
 func (h *Handlers) UploadTLE(c *fiber.Ctx) error {
