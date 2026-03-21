@@ -37,6 +37,7 @@ export interface Pass {
   duration: number;
 }
 
+<<<<<<< HEAD
 export interface AreaPass {
   satelliteId: string;
   satelliteName: string;
@@ -47,6 +48,8 @@ export interface AreaPass {
   duration: number;
 }
 
+=======
+>>>>>>> 50af800 (feat: phase 0)
 export interface WSMessage {
   type: string;
   data: unknown;

@@ -70,4 +70,8 @@ SputnikX/
 
 - **Backend:** Go 1.22, Fiber, go-satellite (SGP4), zerolog, WebSocket
 - **Frontend:** Next.js 14, TypeScript, CesiumJS, Resium, Zustand, Tailwind CSS
+<<<<<<< HEAD
 - **Инфраструктура:** Docker, Docker Compose
+=======
+- **Инфра:** Docker, Docker Compose
+>>>>>>> 50af800 (feat: phase 0)

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import type { Satellite, OrbitPoint, Pass, AreaPass, FilterParams } from '@/types';
+=======
+import type { Satellite, OrbitPoint, Pass, FilterParams } from '@/types';
+>>>>>>> 50af800 (feat: phase 0)
 import { isRenderableAltitudeKm } from '@/lib/utils';
 
 const BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8080';
@@ -160,6 +164,7 @@ export async function fetchPasses(
   return passes.map(normalizePass);
 }
 
+<<<<<<< HEAD
 type AreaPassWire = {
   satellite_id?: string;
   satellite_name?: string;
@@ -194,6 +199,8 @@ export async function fetchAreaPasses(lat: number, lng: number, hours: number = 
   }));
 }
 
+=======
+>>>>>>> 50af800 (feat: phase 0)
 export async function uploadTLE(file: File): Promise<Satellite[]> {
   const rawTle = await file.text();
 

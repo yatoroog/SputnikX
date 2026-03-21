@@ -1,13 +1,19 @@
 'use client';
 
+<<<<<<< HEAD
 import { useState } from 'react';
+=======
+>>>>>>> 50af800 (feat: phase 0)
 import dynamic from 'next/dynamic';
 import { useSatelliteStore } from '@/store/satelliteStore';
 import { useSatellites } from '@/hooks/useSatellites';
 import { useWebSocket } from '@/hooks/useWebSocket';
 import Sidebar from '@/components/ui/Sidebar';
 import SatelliteCard from '@/components/ui/SatelliteCard';
+<<<<<<< HEAD
 import AreaPassesPanel from '@/components/ui/AreaPassesPanel';
+=======
+>>>>>>> 50af800 (feat: phase 0)
 import TimelineControl from '@/components/ui/TimelineControl';
 
 const CesiumGlobe = dynamic(() => import('@/components/map/CesiumGlobe'), {
@@ -16,14 +22,19 @@ const CesiumGlobe = dynamic(() => import('@/components/map/CesiumGlobe'), {
     <div className="absolute inset-0 flex items-center justify-center bg-cosmos-bg">
       <div className="flex flex-col items-center gap-4">
         <div className="w-12 h-12 border-2 border-accent-cyan border-t-transparent rounded-full animate-spin" />
+<<<<<<< HEAD
         <p className="text-[#9ca3af] text-sm">
           {'\u0417\u0430\u0433\u0440\u0443\u0437\u043A\u0430 \u0433\u043B\u043E\u0431\u0443\u0441\u0430...'}
         </p>
+=======
+        <p className="text-[#9ca3af] text-sm">{'\u0417\u0430\u0433\u0440\u0443\u0437\u043A\u0430 \u0433\u043B\u043E\u0431\u0443\u0441\u0430...'}</p>
+>>>>>>> 50af800 (feat: phase 0)
       </div>
     </div>
   ),
 });
 
+<<<<<<< HEAD
 const Map2D = dynamic(() => import('@/components/map/Map2D'), {
   ssr: false,
   loading: () => (
@@ -45,12 +56,18 @@ export default function HomePage() {
   const selectedSatellite = useSatelliteStore((state) => state.selectedSatellite);
   const clickedLocation = useSatelliteStore((state) => state.clickedLocation);
   const [viewMode, setViewMode] = useState<ViewMode>('3d');
+=======
+export default function HomePage() {
+  const satellites = useSatelliteStore((state) => state.satellites);
+  const selectedSatellite = useSatelliteStore((state) => state.selectedSatellite);
+>>>>>>> 50af800 (feat: phase 0)
 
   useSatellites();
   useWebSocket();
 
   return (
     <div className="relative w-screen h-screen overflow-hidden bg-cosmos-bg">
+<<<<<<< HEAD
       {/* Map */}
       <div className="absolute inset-0">
         {viewMode === '3d' ? (
@@ -84,6 +101,11 @@ export default function HomePage() {
             2D
           </button>
         </div>
+=======
+      {/* 3D Globe - full screen */}
+      <div className="absolute inset-0">
+        <CesiumGlobe satellites={satellites} selectedSatellite={selectedSatellite} />
+>>>>>>> 50af800 (feat: phase 0)
       </div>
 
       {/* Left sidebar */}
@@ -98,6 +120,7 @@ export default function HomePage() {
         </div>
       )}
 
+<<<<<<< HEAD
       {/* Right area passes panel */}
       {!selectedSatellite && clickedLocation && (
         <div className="absolute top-4 right-4 bottom-20 z-10">
@@ -105,6 +128,8 @@ export default function HomePage() {
         </div>
       )}
 
+=======
+>>>>>>> 50af800 (feat: phase 0)
       {/* Bottom timeline */}
       <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-10">
         <TimelineControl />
